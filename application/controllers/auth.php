@@ -61,40 +61,32 @@ class Auth extends CI_Controller {
         $data['page'] = "Register";
         $data['handle'] = "login";
 
-        $username = html_escape($this->input->post('username'));
-        $email_address = html_escape($this->input->post('email_address'));
-        $first_name = html_escape($this->input->post('first_name'));
-        $last_name = html_escape($this->input->post('last_name'));
-        $password_one = html_escape($this->input->post('password_one'));
-        $password_two = html_escape($this->input->post('password_two'));
+        $user = html_escape($this->input->post('t_user'));
+        $password_one = html_escape($this->input->post('t_pass'));
+        $password_two = html_escape($this->input->post('t_pass_repeat'));
 
-        $this->form_validation->set_rules('username', 'username', 'required');
-        $this->form_validation->set_rules('email_address', 'email', 'required');
-        $this->form_validation->set_rules('first_name', 'first name', 'required');
-        $this->form_validation->set_rules('last_name', 'last name', 'required');
-        $this->form_validation->set_rules('password_one', 'password', 'required');
-        $this->form_validation->set_rules('password_two', 'repeated password', 'required');
+        $this->form_validation->set_rules('t_user', 'email', 'required');
+        $this->form_validation->set_rules('t_pass', 'password', 'required');
+        $this->form_validation->set_rules('t_pass_repeat', 'repeated password', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             // If the form is not submitted
-            $this->load->view('snippets/header', $data);
-            $this->load->view('vwRegister');
-            $this->load->view('snippets/footer');
+            $this->load->view('vwHome', $data);
         } else {
-            $check_username = $this->queries->check_username($username);
+            $check_username = $this->data->check_email($user);
             if ($check_username > 0) {
-                $data['status']['type'] = "warning";
-                $data['status']['message'] = "The username is already taken";
+                $data['error'] = "The username is already taken";
+                $this->load->view('vwHome', $data);
             } else {
                 if ($password_one != $password_two) {
-                    $data['status']['type'] = "warning";
-                    $data['status']['message'] = "The passwords don't match";
+                    $data['error'] = "The passwords don't match";
+                    $this->load->view('vwHome', $data);
                 } else {
                     // SUCCESSFUL PART
                     $salt = '5&JDDlwz%Rwh!t2Yg-Igae@QxPzFTSId';
                     $enc_pass = md5($salt . $password_one);
-                    $this->queries->create_account($username, $enc_pass, $email_address, $first_name, $last_name);
-                    $get_user_information = $this->queries->get_username($username);
+                    $this->data->create_account($user, $enc_pass);
+                    $get_user_information = $this->data->get_email($user);
                     $this->session->set_userdata(array(
                         'id' => $get_user_information['id'],
                         'username' => $get_user_information['username'],
@@ -104,9 +96,9 @@ class Auth extends CI_Controller {
                     redirect('home');
                 }
             }
-            $this->load->view('snippets/header', $data);
-            $this->load->view('vwRegister');
-            $this->load->view('snippets/footer');
+//            $this->load->view('snippets/header', $data);
+//            $this->load->view('vwRegister');
+//            $this->load->view('snippets/footer');
         }
     }
 
