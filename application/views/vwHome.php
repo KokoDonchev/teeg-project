@@ -70,18 +70,18 @@
                         <button type="submit" class="btn btn-default">Login</button>
                     </form>
 
-                    <form method="POST" action="" class="register__form hide" data-login-form="2">
+                    <form method="POST" action="/auth/do_register" class="register__form hide" data-login-form="2">
                         <div class="form-group">
                             <label for="InputEmail">Enter email address</label>
-                            <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                            <input type="email" class="form-control" id="InputEmail" placeholder="Email" name="t_user">
                         </div>
                         <div class="form-group">
                             <label for="InputPassword">Password</label>
-                            <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="t_pass">
                         </div>
                         <div class="form-group">
                             <label for="InputPassword">Repeat password</label>
-                            <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="t_pass_repeat">
                         </div>
                         <button type="submit" class="btn btn-default">Register</button>
                     </form>
