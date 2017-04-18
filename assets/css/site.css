@@ -1,0 +1,124 @@
+body {
+  background-color: #F4F4F4; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v10/SKK6Nusyv8QPNMtI4j9J2wsYbbCjybiHxArTLjt7FRU.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v10/gFXtEMCp1m_YzxsBpKl68gsYbbCjybiHxArTLjt7FRU.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(https://fonts.gstatic.com/s/montserrat/v10/q2OIMsAtXEkOulLQVdSl053YFo3oYz9Qj7-_6Ux-KkY.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(https://fonts.gstatic.com/s/montserrat/v10/q2OIMsAtXEkOulLQVdSl02tASdhiysHpWmctaYEsrdw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(https://fonts.gstatic.com/s/montserrat/v10/q2OIMsAtXEkOulLQVdSl03XcDWh-RbO457623Zi1kyw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+input {
+  border-radius: 0 !important; }
+
+header {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.navbar {
+  border-bottom: 1px solid black; }
+  .navbar .navbar-fixed-top .nav {
+    padding: 5px 0; }
+  .navbar .navbar-brand {
+    padding: 10px 15px; }
+    .navbar .navbar-brand img {
+      height: 100%; }
+  .navbar .header__search {
+    padding: 8px 0px;
+    float: left; }
+    .navbar .header__search form {
+      position: relative; }
+      .navbar .header__search form input {
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 45px; }
+      .navbar .header__search form button {
+        position: absolute;
+        left: 0;
+        top: 0; }
+
+.template-login .main-login-container {
+  background-color: rgba(245, 245, 245, 0.2);
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+  padding-top: 90px;
+  padding-bottom: 90px; }
+  .template-login .main-login-container .main-login__title {
+    font-size: 78px;
+    line-height: 8  0px; }
+  .template-login .main-login-container .login-box {
+    padding: 0 15px 15px 15px;
+    border: 1px solid #979797;
+    background-color: white; }
+    .template-login .main-login-container .login-box .login-options {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px; }
+      .template-login .main-login-container .login-box .login-options .login__option {
+        background-color: #DEFFE4;
+        padding: 10px 20px; }
+        .template-login .main-login-container .login-box .login-options .login__option a {
+          color: inherit; }
+          .template-login .main-login-container .login-box .login-options .login__option a:hover, .template-login .main-login-container .login-box .login-options .login__option a:focus {
+            text-decoration: none; }
+        .template-login .main-login-container .login-box .login-options .login__option.active {
+          background-color: white; }
+
+.template-general {
+  padding-top: 50px; }
+
+.module-items {
+  margin: 0 -10px; }
+  .module-items .content-box {
+    margin: 0 10px; }
+    .module-items .content-box .module__image img {
+      width: 100%; }
+    .module-items .content-box .module__information {
+      background-color: white;
+      padding: 5px 10px;
+      border-bottom: 2px solid #979797; }
+      .module-items .content-box .module__information h1 {
+        margin-top: 5px;
+        font-size: 16px; }
