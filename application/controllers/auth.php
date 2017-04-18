@@ -35,7 +35,7 @@ class Auth extends CI_Controller {
             } else {
                 $salt = '5&JDDlwz%Rwh!t2Yg-Igae@QxPzFTSId';
                 $enc_pass = md5($salt . $password);
-                $sql = "SELECT * FROM teeg_users WHERE username = ? AND password = ?";
+                $sql = "SELECT * FROM teeg_users WHERE email = ? AND password = ?";
                 $val = $this->db->query($sql, array($user, $enc_pass));
                 
                 if ($val->num_rows()) {

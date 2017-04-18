@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.42)
 # Database: project_teeg
-# Generation Time: 2017-04-18 01:28:04 +0000
+# Generation Time: 2017-04-18 01:30:24 +0000
 # ************************************************************
 
 
@@ -150,6 +150,7 @@ DROP TABLE IF EXISTS `teeg_users`;
 CREATE TABLE `teeg_users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `access_level` int(4) DEFAULT NULL,
   `university_id` int(11) DEFAULT NULL,
@@ -160,9 +161,9 @@ CREATE TABLE `teeg_users` (
 LOCK TABLES `teeg_users` WRITE;
 /*!40000 ALTER TABLE `teeg_users` DISABLE KEYS */;
 
-INSERT INTO `teeg_users` (`id`, `username`, `password`, `access_level`, `university_id`, `course_id`)
+INSERT INTO `teeg_users` (`id`, `username`, `email`, `password`, `access_level`, `university_id`, `course_id`)
 VALUES
-	(1,'me@donchev.net','44975e9cea8531cefd5256e14c93a307',NULL,NULL,NULL);
+	(1,'Donchev','me@donchev.net','44975e9cea8531cefd5256e14c93a307',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `teeg_users` ENABLE KEYS */;
 UNLOCK TABLES;
