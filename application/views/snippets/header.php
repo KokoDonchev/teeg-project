@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login</title>
+    <title><?php echo $page ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?= HTTP_CSS_PATH; ?>bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?= HTTP_CSS_PATH; ?>site.css" rel="stylesheet">
     <link href="<?= HTTP_CSS_PATH; ?>slick.css" rel="stylesheet">
     <link href="<?= HTTP_CSS_PATH; ?>slick-theme.css" rel="stylesheet">
     <link href="<?= HTTP_CSS_PATH; ?>style.css" rel="stylesheet">
+    <link href="<?= HTTP_CSS_PATH; ?>site.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,13 +43,14 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="http://placehold.it/150x50&text=Logo" alt="">
+                <!--<img src="http://placehold.it/150x50&text=Logo" alt="">-->
+                <img src="<?= HTTP_IMAGES_PATH; ?>/teeg_logo.png" alt="">
             </a>
         </div>
         <div class="header__search">
             <form class="form-inline">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Search materials">
                 </div>
                 <button type="submit" class="btn btn-default">S</button>
             </form>

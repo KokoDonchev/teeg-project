@@ -10,7 +10,7 @@ class Home extends CI_Controller {
     }
 
     function index() {
-        $data['title'] = "Homepage";
+        $data['page'] = "Homepage";
         $data['handle'] = "homepage";
 
         $this->load->view('snippets/header', $data);

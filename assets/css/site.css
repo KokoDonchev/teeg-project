@@ -49,6 +49,12 @@ body {
   src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(https://fonts.gstatic.com/s/montserrat/v10/q2OIMsAtXEkOulLQVdSl03XcDWh-RbO457623Zi1kyw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
+.remove-anchor-style {
+  color: initial; }
+  .remove-anchor-style:hover {
+    text-decoration: none;
+    cursor: pointer; }
+
 input {
   border-radius: 0 !important; }
 
@@ -57,6 +63,7 @@ header {
   padding-bottom: 40px; }
 
 .navbar {
+  background-color: white;
   border-bottom: 1px solid black; }
   .navbar .navbar-fixed-top .nav {
     padding: 5px 0; }
@@ -109,16 +116,21 @@ header {
 .template-general {
   padding-top: 50px; }
 
-.module-items {
+.materials__row h1.materials__row-headline {
+  font-size: 18px; }
+
+.materials__row .module-items {
   margin: 0 -10px; }
-  .module-items .content-box {
+  .materials__row .module-items .content-box {
     margin: 0 10px; }
-    .module-items .content-box .module__image img {
+    .materials__row .module-items .content-box .module__image img {
       width: 100%; }
-    .module-items .content-box .module__information {
+    .materials__row .module-items .content-box .module__information {
       background-color: white;
       padding: 5px 10px;
-      border-bottom: 2px solid #979797; }
-      .module-items .content-box .module__information h1 {
+      border-bottom: 2px solid #007e4f; }
+      .materials__row .module-items .content-box .module__information h1 {
         margin-top: 5px;
         font-size: 16px; }
+  .materials__row .module-items .slick-next:before {
+    color: grey; }
