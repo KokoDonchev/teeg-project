@@ -14,6 +14,8 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 5,
-        arrows: true
+        arrows: true,
+        prevArrow: '',
+        nextArrow: '<button type="button" class="slick-next">Next</button>'
     });
 });
