@@ -77,4 +77,14 @@ class Data extends CI_Model {
         // upload_time
     }
 
+    public function get_account($id) {
+        $query = $this->db->get_where('teeg_users', array('id' => $id));
+        return $query->row_array();
+    }
+
+    public function update_account($id, $username, $password) {
+        $sql = "UPDATE `teeg_users` SET username = ?, password = ? WHERE id = ?";
+        $this->db->query($sql, array($username, $password, $id));
+    }
+
 }
