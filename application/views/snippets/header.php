@@ -49,9 +49,9 @@
             </a>
         </div>
         <div class="header__search">
-            <form class="form-inline" action="" method="post">
+            <form class="form-inline" action="search/index" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Search materials" >
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Search materials" name="search">
                 </div>
                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
             </form>
