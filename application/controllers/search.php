@@ -11,7 +11,13 @@ class Search extends CI_Controller {
 
     public function index() {
         $data['page'] = "Search";
-        $data['handle'] = "searcg";
+        $data['handle'] = "search";
+
+        $search = $this->input->post('search');
+
+        $data['search'] = $search;
+
+        $data['result'] = $this->lookup->search($search);
 
         $this->load->view('snippets/header', $data);
         $this->load->view('vwSearch');
