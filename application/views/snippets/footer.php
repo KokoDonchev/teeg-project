@@ -2,6 +2,8 @@
     
 </footer>
 
+    <?php $this->view('snippets/upload_content') ?>
+
     <!-- jQuery -->
     <script src="<?= HTTP_JS_PATH; ?>jquery.js"></script>
 

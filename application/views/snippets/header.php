@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="<?= HTTP_CSS_PATH; ?>slick.css" rel="stylesheet">
     <link href="<?= HTTP_CSS_PATH; ?>slick-theme.css" rel="stylesheet">
+    <link href="<?= HTTP_CSS_PATH; ?>font-awesome.min.css" rel="stylesheet">
     <link href="<?= HTTP_CSS_PATH; ?>style.css" rel="stylesheet">
     <link href="<?= HTTP_CSS_PATH; ?>site.css" rel="stylesheet">
 
@@ -42,7 +43,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <!--<img src="http://placehold.it/150x50&text=Logo" alt="">-->
                 <img src="<?= HTTP_IMAGES_PATH; ?>/teeg_logo.png" alt="">
             </a>
@@ -52,7 +53,7 @@
                 <div class="form-group">
                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Search materials">
                 </div>
-                <button type="submit" class="btn btn-default">S</button>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,7 +63,10 @@
                     <a href="#">My courses</a>
                 </li>
                 <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hi</a>
+                    <a href="#" data-toggle="modal" data-target="#upload_content">Upload</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 12px; padding-bottom: 12px;"><i class="fa fa-user-circle-o" style="font-size: 24px;"></i></a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="/account"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
@@ -78,6 +82,21 @@
     <!-- /.container -->
 </nav>
 
+<?php if (isset($upload_status) && $upload_status): ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-<?php echo $upload_status['type'] ?> alert-dismissable alert-success-upload">
+                        <a class="panel-close close" data-dismiss="alert">×</a> 
+                        <i class="fa fa-check"></i>
+                        <?php echo $upload_status['message'] ?>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<?php endif ?>
 
 <?php
 

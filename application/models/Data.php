@@ -33,4 +33,48 @@ class Data extends CI_Model {
         return $query->row_array();
     }
 
+    /*
+    | -------------------------------------------------------------------
+    |  Essentials
+    | -------------------------------------------------------------------
+    */
+
+    public function get_university_name($uni_id) {
+        $query = $this->db->get_where('teeg_universities', array('id' => $uni_id));
+        return $query->row_array();
+    }
+
+    public function get_course_name($course_id) {
+        $query = $this->db->get_where('teeg_courses', array('id' => $course_id));
+        return $query->row_array();
+    }
+
+    /*
+    | -------------------------------------------------------------------
+    |  Front page
+    | -------------------------------------------------------------------
+    */
+
+
+
+    /*
+    | -------------------------------------------------------------------
+    |  Upload content
+    | -------------------------------------------------------------------
+    */
+
+    public function upload_content($title, $desc) {
+        $sql = "INSERT INTO `teeg_content` (id, user_id, course_id, title, description, cont_thumb, file_type, file_ref, upload_time)
+                VALUES ('', '', 1, ?, ?, 1, 1, 1, 1)";
+        $this->db->query($sql, array($title, $desc));
+        // user_id
+        // course_id
+        // title
+        // description
+        // cont_thumb
+        // file_type
+        // file_ref
+        // upload_time
+    }
+
 }
